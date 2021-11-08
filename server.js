@@ -9,5 +9,7 @@ app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-console.log('[Express] Creating a new server na porta: ' + port)
+console.log('API chat server = ' + process.env.REACT_APP_CHATSERVER);
+console.log('API back end = ' + process.env.REACT_APP_HOST);
+console.log('[Express] Creating a new server na porta: ' + port);
 app.listen(port);
